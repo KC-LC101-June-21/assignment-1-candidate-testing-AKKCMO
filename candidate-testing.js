@@ -6,11 +6,17 @@ const input = require('readline-sync');
 let candidateName;
 // TODO 1.2a: Define question, correctAnswer, and candidateAnswer //
 // let question = "Who was the first American woman in space? ";
+let question = " Who was the first american woman in space? ";
 let correctAnswer = "Sally Ride";
 let candidateAnswer;
-let questions = ["Who was the forst American woman in space?", "True or false: 5 kilometer == 5000 meters?", "(5+3)/2*10 == ?", "Given the array [8, 'Orbit', 'Trajectory', 45], what is entry at index 2?", "What is the minimum crew size for the ISS"]; 
+let questions = [
+"Who was the forst American woman in space? ", 
+  "True or false: 5 kilometer == 5000 meters? ",  
+  " (5+3)/2*10 == ? ",
+ " Given the array [8, 'Orbit', 'Trajectory', 45], what entry is at index 2? ", 
+ " What is the minimum crew size for the ISS? " ] 
 let correctAnswers = ["Sally Ride", "true", "40", "Trajectory", "3"];
-let candidateAnswers;
+let candidateAnswers = [];
 
 
 function askForName() {
@@ -20,25 +26,19 @@ candidateName = input.question("Name? ");
 
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
-// let quiz = []
-//  for (let i = 0; i < 5; i++)
-//  let question = Array(questions[i]);
-//  console.log(question;)
-for questions (i = 0; i < questions.length; i++) {
-  console.log(questions[i]);
-}
- 
-//   candidateAnswers = input.question(question);
+// 
+    for (let i = 0; i < questions.length; i++) {
+
+  candidateAnswers.push(input.question(questions[i]));
+      console.log(` You answered ${candidateAnswers[i]}\nThe correct answer is ${correctAnswers[i]}\n`);
+      }
+
 }
 
 function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
-// if (candidateAnswer === correctAnswer) {
-//     console.log("correct");
-// } else {
-//   console.log("wrong");
-// }
+
 
 
   let grade;
